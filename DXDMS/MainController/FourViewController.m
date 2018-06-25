@@ -16,7 +16,7 @@
 #import "ChanPinManagerTableViewController.h"
 #import "JiTuanManagerTableViewController.h"
 #import "KeHuManagerTableViewController.h"
-
+#import "GonggaoListViewController.h"
 @interface FourViewController ()
 @property(nonatomic,strong)NSMutableArray *titArr;
 @property(nonatomic,strong)NSMutableArray *imgArr;
@@ -42,12 +42,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 190)];
-    img.image = [UIImage imageNamed:@"bg10.jpg"];
+    img.image = [UIImage imageNamed:@"bg1.jpg"];
     img.userInteractionEnabled = YES;
     [self.view addSubview:img];
     
     UIView *vv = [[UIView alloc]initWithFrame:CGRectMake(0, 130, SCREEN_WIDTH, 60)];
-    vv.backgroundColor = [UIColor colorWithWhite:.85 alpha:.5];
+    vv.backgroundColor = [UIColor colorWithWhite:.85 alpha:.3];
     [img addSubview:vv];
     
     
@@ -63,13 +63,14 @@
     LRViewBorderRadius(userImg, 50, 0, [UIColor clearColor]);
     [img addSubview:userImg];
     
+    [img bringSubviewToFront:userImg];
     UILabel *userlab = [[UILabel alloc]initWithFrame:CGRectMake(120, 0, SCREEN_WIDTH-130, 60)];
     userlab.font = [UIFont systemFontOfSize:16];
     userlab.text = [NSString stringWithFormat:@"%@  %@",[Manager redingwenjianming:@"user.text"],[Manager redingwenjianming:@"phone.text"]];
     userlab.textColor = [UIColor whiteColor];
     [vv addSubview:userlab];
-    self.titArr = [@[@"产品管理",@"集团管理",@"系统管理",@"客户管理"]mutableCopy];
-    self.imgArr = [@[@"产品管理",@"集团管理",@"系统管理",@"客户管理"]mutableCopy];
+    self.titArr = [@[@"产品管理",@"集团管理",@"系统管理",@"客户管理",@"公告"]mutableCopy];
+    self.imgArr = [@[@"产品管理",@"集团管理",@"系统管理",@"客户管理",@"公告管理"]mutableCopy];
     [self setbutton];
 }
 
@@ -85,7 +86,6 @@
     } else {
         hangshu = (int )self.titArr.count / 3 + 1;
     }
-    //j是小于你设置的列数
     for (int i = 0; i < hangshu; i++) {
         for (int j = 0; j < 3; j++) {
             CustomButton *btn = [CustomButton buttonWithType:UIButtonTypeCustom];
@@ -114,29 +114,35 @@
     }
 }
 - (void)caidan:(UIButton *)sender{
-        if ([sender.titleLabel.text isEqualToString:@"产品管理"]) {
-            ChanPinManagerTableViewController *jituan = [[ChanPinManagerTableViewController alloc]init];
-            UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
-            jituan.navigationItem.title = @"产品管理";
-            [self presentViewController:navi animated:YES completion:nil];
-        }
-        if ([sender.titleLabel.text isEqualToString:@"系统管理"]) {
-            XiTongManagerTableViewController *jituan = [[XiTongManagerTableViewController alloc]init];
-            UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
-            jituan.navigationItem.title = @"系统管理";
-            [self presentViewController:navi animated:YES completion:nil];
-        }
+    if ([sender.titleLabel.text isEqualToString:@"产品管理"]) {
+        ChanPinManagerTableViewController *jituan = [[ChanPinManagerTableViewController alloc]init];
+        UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
+        jituan.navigationItem.title = @"产品管理";
+        [self presentViewController:navi animated:YES completion:nil];
+    }
+    if ([sender.titleLabel.text isEqualToString:@"系统管理"]) {
+        XiTongManagerTableViewController *jituan = [[XiTongManagerTableViewController alloc]init];
+        UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
+        jituan.navigationItem.title = @"系统管理";
+        [self presentViewController:navi animated:YES completion:nil];
+    }
     
-        if ([sender.titleLabel.text isEqualToString:@"集团管理"]) {
-            JiTuanManagerTableViewController *jituan = [[JiTuanManagerTableViewController alloc]init];
-            UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
-            jituan.navigationItem.title = @"集团管理";
-            [self presentViewController:navi animated:YES completion:nil];
-        }
+    if ([sender.titleLabel.text isEqualToString:@"集团管理"]) {
+        JiTuanManagerTableViewController *jituan = [[JiTuanManagerTableViewController alloc]init];
+        UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
+        jituan.navigationItem.title = @"集团管理";
+        [self presentViewController:navi animated:YES completion:nil];
+    }
     if ([sender.titleLabel.text isEqualToString:@"客户管理"]) {
         KeHuManagerTableViewController *jituan = [[KeHuManagerTableViewController alloc]init];
         UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
         jituan.navigationItem.title = @"客户管理";
+        [self presentViewController:navi animated:YES completion:nil];
+    }
+    if ([sender.titleLabel.text isEqualToString:@"公告"]) {
+        GonggaoListViewController *jituan = [[GonggaoListViewController alloc]init];
+        UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:jituan];
+        jituan.navigationItem.title = @"公告管理";
         [self presentViewController:navi animated:YES completion:nil];
     }
    

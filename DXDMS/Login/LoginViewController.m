@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "DXDMS-Swift.h"
 @interface LoginViewController ()<UITextFieldDelegate>
 {
     NSString *appstore_verson;
@@ -31,58 +31,39 @@
     self.text2.text  = [Manager redingwenjianming:@"username.text"];
     self.text3.text  = [Manager redingwenjianming:@"password.text"];
     
-    
-    //[self lodverson];
+    [self lodverson];
 }
-
-
 - (void)lodverson{
     NSString *dom= [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
     NSString *tex= [dom stringByAppendingPathComponent:@"newversion.text"];
     //取出存入的上次版本号版本号
     appstore_verson = [NSString stringWithContentsOfFile:tex encoding:NSUTF8StringEncoding error:nil];
-    
-    __weak typeof(self) weakSelf = self;
+    //__weak typeof(self) weakSelf = self;
     AFHTTPSessionManager *session = [Manager returnsession];
     [session POST:@"https://itunes.apple.com/lookup?id=1309457456" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [Manager returndictiondata:responseObject];
+        //NSLog(@"------%@",dic);
         NSMutableArray *arr = [dic objectForKey:@"results"];
         NSDictionary *dict = [arr lastObject];
         //app store版本号
         appstore_newverson = dict[@"version"];
-        
         //写入版本号
         NSString *doucments = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
         NSString *text= [doucments stringByAppendingPathComponent:@"newversion.text"];
         [appstore_newverson writeToFile:text atomically:YES encoding:NSUTF8StringEncoding error:nil];
-        
         //NSLog(@"appstore版本：%@----存入的版本号：%@",appstore_newverson,appstore_verson);
-        
-        if (![appstore_verson isEqualToString:appstore_newverson] && appstore_verson != nil){
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"有新的版本需要更新，是否前往" message:@"温馨提示" preferredStyle:1];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"稍后再说" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            }];
-            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/jie-zou-da-shi/id1309457456?mt=8"]];
-            }];
-            [alert addAction:cancel];
-            [alert addAction:sure];
-            [weakSelf presentViewController:alert animated:YES completion:nil];
+        if ([appstore_verson isEqualToString:appstore_newverson] && appstore_verson != nil){
+            //方法一：
+            [SELUpdateAlert showUpdateAlertWithVersion:appstore_newverson Descriptions:@[@"1.阿里巴巴呼啦呼啦",@"2.阿里巴巴呼啦呼啦",@"3.阿里巴巴呼啦呼啦",@"4.阿里巴巴呼啦呼啦",@"5.阿里巴巴呼啦呼啦",@"6.阿里巴巴呼啦呼啦",@"7.阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦阿里巴巴呼啦呼啦"]];
+            //方法二：
+            //[SELUpdateAlert showUpdateAlertWithVersion:@"1.0.0" Description:@"1.xxxxxxxxxx\n2.xxxxxxxxxxxxxxxxx\n3.xxxxxxxxx\n4.xxxxxxxxxx"];
         }
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
 }
-
-
-
-
-
-
-
-
-
 - (IBAction)clickBtnLogin:(id)sender {
+    
+    
         [self.text2 resignFirstResponder];
         [self.text3 resignFirstResponder];
         
@@ -118,7 +99,6 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 - (void)lodlogin {
-   
     NSDictionary *dic = @{@"userName":self.text2.text,
                           @"password":self.text3.text,
                           };

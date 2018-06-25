@@ -23,13 +23,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="31Y-AS-BDP">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="31Y-AS-BDP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="1re-z3-b5D" appends="YES" id="57U-hn-gAx"/>
                     </connections>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-vP-OWr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="0.20018193493150679" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ8-FF-t9s">
                     <rect key="frame" x="20" y="440" width="335" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,8 +112,10 @@
                 <constraint firstItem="RZ8-FF-t9s" firstAttribute="top" secondItem="Bhp-h9-UL2" secondAttribute="bottom" constant="50" id="Ahq-uN-xTr"/>
                 <constraint firstAttribute="bottom" secondItem="31Y-AS-BDP" secondAttribute="bottom" id="Csp-l9-IDe"/>
                 <constraint firstItem="vOI-i5-zuT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="Dcf-wQ-URc"/>
+                <constraint firstAttribute="bottom" secondItem="nCO-vP-OWr" secondAttribute="bottom" id="HYl-pv-8VT"/>
                 <constraint firstItem="vOI-i5-zuT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hpc-Dz-oZr"/>
                 <constraint firstItem="RZ8-FF-t9s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Hya-Tg-DYE"/>
+                <constraint firstAttribute="trailing" secondItem="nCO-vP-OWr" secondAttribute="trailing" id="KaR-Ps-2uo"/>
                 <constraint firstItem="Bhp-h9-UL2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Lsu-ZW-dbw"/>
                 <constraint firstItem="ZBc-go-iBg" firstAttribute="top" secondItem="evr-4W-Ewk" secondAttribute="bottom" constant="35" id="Mh5-Wq-aLj"/>
                 <constraint firstAttribute="trailing" secondItem="Bhp-h9-UL2" secondAttribute="trailing" constant="20" id="S4V-CF-iB7"/>
@@ -122,8 +128,10 @@
                 <constraint firstItem="Dif-hV-2Qw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="i2p-uL-fO5"/>
                 <constraint firstItem="ccc-h0-cop" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="iad-5K-2Iw"/>
                 <constraint firstItem="31Y-AS-BDP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jLa-1X-XX7"/>
+                <constraint firstItem="nCO-vP-OWr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kRB-ue-a28"/>
                 <constraint firstItem="Dif-hV-2Qw" firstAttribute="top" secondItem="ccc-h0-cop" secondAttribute="bottom" constant="35" id="p7m-Z2-Qe1"/>
                 <constraint firstAttribute="trailing" secondItem="ccc-h0-cop" secondAttribute="trailing" constant="20" id="s9c-g5-Qeu"/>
+                <constraint firstItem="nCO-vP-OWr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tML-5R-SQj"/>
                 <constraint firstItem="ccc-h0-cop" firstAttribute="top" secondItem="evr-4W-Ewk" secondAttribute="bottom" constant="30" id="xnh-aF-7xH"/>
             </constraints>
             <point key="canvasLocation" x="-88.5" y="47.5"/>
@@ -135,7 +143,7 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="bg10.jpg" width="1080" height="1920"/>
+        <image name="bg2.jpg" width="1080" height="1920"/>
         <image name="logo" width="138" height="138"/>
     </resources>
 </document>

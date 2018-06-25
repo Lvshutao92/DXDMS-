@@ -8,13 +8,27 @@
 
 #import "ZJYE_ViewController.h"
 
-@interface ZJYE_ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZJYE_ViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     NSInteger page;
     NSInteger totalnum;
+    UIView *bgSearchView;
+    UIScrollView *scrollview;
+    UIView *bgTableview1;
+    UITextField *text1;
+    UITextField *text2;
+    UITextField *text3;
+    UITextField *text4;
+    NSString *partnerStr;
 }
+@property(nonatomic,strong)UITableView *tableview1;
+
+
+
+
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)UITableView *tableview;
+
 
 @property(nonatomic,strong)NSMutableArray *statusArray;
 @property(nonatomic,strong)NSMutableArray *kehuarr;
@@ -30,16 +44,112 @@
 - (void)viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = YES;
 }
-- (void)clickadd{
-    //    Gongsi_addedit_ViewController *add = [[Gongsi_addedit_ViewController alloc]init];
-    //    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:add];
-    //    add.navigationItem.title = @"新增";
-    //    add.arr = self.jiTuanArray;
-    //    [self presentViewController:navi animated:YES completion:nil];
-}
+
 - (void)clicksearch{
+    if (bgSearchView.hidden == NO) {
+        bgSearchView.hidden = YES;
+    }else{
+        bgSearchView.hidden = NO;
+    }
+}
+- (void)clickCancel{
+    bgSearchView.hidden = YES;
+}
+- (void)clickSure{
+    bgSearchView.hidden = YES;
+    [self setUpReflash];
+}
+- (void)testregis{
+    [text4 resignFirstResponder];
+    [text3 resignFirstResponder];
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if ([textField isEqual:text1]) {
+        [self testregis];
+        bgTableview1.hidden = NO;
+        [self.tableview1 reloadData];
+        return NO;
+    }
+    return YES;
+}
+
+- (void)setUpSearchView{
+    CGFloat height;
+    if ([[[Manager sharedManager] iphoneType] isEqualToString:@"iPhone X"] || [[[Manager sharedManager] iphoneType] isEqualToString:@"iPhone Simulator"]) {
+        height = 88;
+    }else{
+        height = 64;
+    }
+    bgSearchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0+height, SCREEN_WIDTH, SCREEN_HEIGHT-height)];
+    bgSearchView.backgroundColor = [UIColor colorWithWhite:.85 alpha:.5];
+    bgSearchView.hidden = YES;
+    [self.view addSubview:bgSearchView];
+    
+    scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    scrollview.backgroundColor = [UIColor whiteColor];
+    scrollview.contentSize = CGSizeMake(0, 150);
+    [bgSearchView addSubview:scrollview];
+    
+    UIButton *cancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancel.frame = CGRectMake(0, 149, SCREEN_WIDTH/2, 45);
+    [cancel setTitle:@"取消" forState:UIControlStateNormal];
+    cancel.backgroundColor = [UIColor colorWithWhite:.8 alpha:1];
+    [cancel addTarget:self action:@selector(clickCancel) forControlEvents:UIControlEventTouchUpInside];
+    [bgSearchView addSubview:cancel];
+    
+    UIButton *sure = [UIButton buttonWithType:UIButtonTypeCustom];
+    sure.frame = CGRectMake(SCREEN_WIDTH/2, 149, SCREEN_WIDTH/2, 45);
+    [sure setTitle:@"确定" forState:UIControlStateNormal];
+    sure.backgroundColor = [UIColor redColor];
+    [sure addTarget:self action:@selector(clickSure) forControlEvents:UIControlEventTouchUpInside];
+    [bgSearchView addSubview:sure];
+    
+    UILabel *lab1 = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WIDTH-20, 20)];
+    lab1.text = @"客户名称:";
+    [scrollview addSubview:lab1];
+    text1 = [[UITextField alloc]initWithFrame:CGRectMake(10, 40, SCREEN_WIDTH-20, 40)];
+    text1.delegate = self;
+    text1.borderStyle = UITextBorderStyleRoundedRect;
+    [scrollview addSubview:text1];
+    
+    
+    
+    text1.text = @"";
+    partnerStr = @"";
+//    text2.text = @"";
+//    text3.text = @"";
+//    text4.text = @"";
     
 }
+- (void)clickbtn1{
+    bgTableview1.hidden = YES;
+}
+- (void)setUpTableview1{
+    bgTableview1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    bgTableview1.backgroundColor = [UIColor colorWithWhite:.85 alpha:.5];
+    bgTableview1.hidden = YES;
+    [self.view addSubview:bgTableview1];
+    
+    
+    UIButton *btn1  = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.frame = CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WIDTH, 50);
+    [btn1 setTitle:@"取消" forState:UIControlStateNormal];
+    btn1.backgroundColor = [UIColor lightGrayColor];
+    [btn1 addTarget:self action:@selector(clickbtn1) forControlEvents:UIControlEventTouchUpInside];
+    [bgTableview1 addSubview:btn1];
+    
+    self.tableview1 = [[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-450, SCREEN_WIDTH, 400)];
+    self.tableview1.delegate = self;
+    self.tableview1.dataSource = self;
+    self.tableview1.backgroundColor = [UIColor whiteColor];
+    [self.tableview1 registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell1"];
+    [bgTableview1 addSubview:self.tableview1];
+    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
+    self.tableview1.tableFooterView = v;
+    [self.view bringSubviewToFront:self.tableview1];
+}
+
+
 
 
 - (void)back{
@@ -62,7 +172,6 @@
     self.navigationItem.leftBarButtonItem = bar;
     
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    UIBarButtonItem *bar1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(clickadd)];
     UIBarButtonItem *bar2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(clicksearch)];
     self.navigationItem.rightBarButtonItem = bar2;
     
@@ -77,6 +186,8 @@
     self.tableview.tableFooterView = v;
     
     [self lodkehuname];
+    [self setUpSearchView];
+    [self setUpTableview1];
     [self setUpReflash];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fkzh:) name:@"fkzh" object:nil];
 }
@@ -110,12 +221,29 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([tableView isEqual:self.tableview1]) {
+        return 50;
+    }
     return 130;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if ([tableView isEqual:self.tableview1]) {
+        return self.kehuarr.count;
+    }
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([tableView isEqual:self.tableview1]) {
+        static NSString *identifierCell = @"cell1";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierCell];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifierCell];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        ModelOne *model = [self.kehuarr objectAtIndex:indexPath.row];
+        cell.textLabel.text = model.partnerName;
+        return cell;
+    }
     static NSString *identifierCell = @"cell";
     OneCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierCell];
     if (cell == nil) {
@@ -137,14 +265,22 @@
         }
     }
     
-    
-    
     cell.lab2.text = [NSString stringWithFormat:@"当前余额：%@",model.totalBalance];
     cell.lab3.text = [NSString stringWithFormat:@"充值总额：%@",model.totalFee];
     
     cell.line.hidden = YES;
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([tableView isEqual:self.tableview1]) {
+        ModelOne *model = [self.kehuarr objectAtIndex:indexPath.row];
+        text1.text = model.partnerName;
+        partnerStr = model.id;
+        bgTableview1.hidden = YES;
+    }
+}
+
+
 
 //刷新数据
 -(void)setUpReflash
@@ -167,7 +303,7 @@
     __weak typeof(self) weakSelf = self;
     NSDictionary *dic = @{@"companyId":@"",
                           @"id":@"",
-                          @"partnerInfoId":@"",
+                          @"partnerInfoId":partnerStr,
                           @"totalBalance":@"",
                           @"totalFee":@"",
                           };
@@ -201,7 +337,7 @@
     __weak typeof(self) weakSelf = self;
     NSDictionary *dic = @{@"companyId":@"",
                           @"id":@"",
-                          @"partnerInfoId":@"",
+                          @"partnerInfoId":partnerStr,
                           @"totalBalance":@"",
                           @"totalFee":@"",
                           };

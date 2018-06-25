@@ -31,6 +31,7 @@
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *delebtnwidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lab1Height;
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *deleEditJuLi;

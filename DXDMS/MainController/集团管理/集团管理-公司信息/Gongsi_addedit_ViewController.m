@@ -67,10 +67,10 @@
 
 - (void)lodEditGetList{
     NSString *str = [NSString stringWithFormat:@"%@/%@",KURLNSString(@"group/groupcompany/get"),self.idstr];
-    NSLog(@"******%@",str);
+//    NSLog(@"******%@",str);
     [Manager requestPOSTWithURLStr:str paramDic:nil token:nil finish:^(id responseObject) {
         NSDictionary *diction = [Manager returndictiondata:responseObject];
-        NSLog(@"******%@",diction);
+//        NSLog(@"******%@",diction);
 //        text2.text = [diction objectForKey:@"resourceCode"];
 //        text3.text = [diction objectForKey:@"resourceName"];
     } enError:^(NSError *error) {

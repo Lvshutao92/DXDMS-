@@ -8,10 +8,14 @@
 
 #import "XilieViewController.h"
 
-@interface XilieViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface XilieViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     NSInteger page;
     NSInteger totalnum;
+    
+    UITextField *textf;
+    UIView *bgSearchView;
+    UIScrollView *scrollview;
 }
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)UITableView *tableview;
@@ -32,8 +36,62 @@
 
 
 - (void)clicksearch{
-    
+    if (bgSearchView.hidden == NO) {
+        bgSearchView.hidden = YES;
+    }else{
+        bgSearchView.hidden = NO;
+    }
 }
+- (void)clickCancel{
+    bgSearchView.hidden = YES;
+}
+- (void)clickSure{
+    bgSearchView.hidden = YES;
+    [self setUpReflash];
+}
+- (void)setUpSearchView{
+    CGFloat height;
+    if ([[[Manager sharedManager] iphoneType] isEqualToString:@"iPhone X"] || [[[Manager sharedManager] iphoneType] isEqualToString:@"iPhone Simulator"]) {
+        height = 88;
+    }else{
+        height = 64;
+    }
+    bgSearchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0+height, SCREEN_WIDTH, SCREEN_HEIGHT-height)];
+    bgSearchView.backgroundColor = [UIColor colorWithWhite:.85 alpha:.5];
+    bgSearchView.hidden = YES;
+    [self.view addSubview:bgSearchView];
+    
+    scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+    scrollview.backgroundColor = [UIColor whiteColor];
+    //scrollview.contentSize = CGSizeMake(0, SCREEN_HEIGHT);
+    [bgSearchView addSubview:scrollview];
+    
+    UIButton *cancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancel.frame = CGRectMake(0, 199, SCREEN_WIDTH/2, 45);
+    [cancel setTitle:@"取消" forState:UIControlStateNormal];
+    cancel.backgroundColor = [UIColor colorWithWhite:.8 alpha:1];
+    [cancel addTarget:self action:@selector(clickCancel) forControlEvents:UIControlEventTouchUpInside];
+    [bgSearchView addSubview:cancel];
+    
+    UIButton *sure = [UIButton buttonWithType:UIButtonTypeCustom];
+    sure.frame = CGRectMake(SCREEN_WIDTH/2, 199, SCREEN_WIDTH/2, 45);
+    [sure setTitle:@"确定" forState:UIControlStateNormal];
+    sure.backgroundColor = [UIColor redColor];
+    [sure addTarget:self action:@selector(clickSure) forControlEvents:UIControlEventTouchUpInside];
+    [bgSearchView addSubview:sure];
+    
+    UILabel *lab1 = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WIDTH-20, 20)];
+    lab1.text = @"系列名称:";
+    [scrollview addSubview:lab1];
+    textf = [[UITextField alloc]initWithFrame:CGRectMake(10, 40, SCREEN_WIDTH-20, 40)];
+    textf.delegate = self;
+    textf.text = @"";
+    textf.borderStyle = UITextBorderStyleRoundedRect;
+    [scrollview addSubview:textf];
+}
+
+
+
 
 
 - (void)back{
@@ -57,6 +115,7 @@
     UIBarButtonItem *bar2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(clicksearch)];
     self.navigationItem.rightBarButtonItems = @[bar1,bar2];
     
+    
     self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -66,10 +125,12 @@
     UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
     self.tableview.tableFooterView = v;
     
+    [self setUpSearchView];
     
     [self setUpReflash];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(xilie:) name:@"xilie" object:nil];
 }
+
 - (void)xilie:(NSNotification *)text{
     [self setUpReflash];
 }
@@ -222,7 +283,7 @@
 - (void)loddeList{
     [self.tableview.mj_footer endRefreshing];
     __weak typeof(self) weakSelf = self;
-    NSDictionary *dic = @{};
+    NSDictionary *dic = @{@"likeSeriesName":textf.text};
     NSString *str = [NSString stringWithFormat:@"%@?currentPage=1&pageSize=10&sortName=id&sortType=desc",KURLNSString(@"product/productseries/page")];
     [Manager requestPOSTWithURLStr:str paramDic:dic token:nil finish:^(id responseObject) {
         NSDictionary *diction = [Manager returndictiondata:responseObject];
@@ -250,7 +311,7 @@
 - (void)loddeSLList{
     [self.tableview.mj_header endRefreshing];
     __weak typeof(self) weakSelf = self;
-    NSDictionary *dic = @{};
+    NSDictionary *dic = @{@"likeSeriesName":textf.text};
     NSString *str = [NSString stringWithFormat:@"%@?currentPage=%ld&pageSize=10&sortName=id&sortType=desc",KURLNSString(@"product/productseries/page"),page];
     [Manager requestPOSTWithURLStr:str paramDic:dic token:nil finish:^(id responseObject) {
         NSDictionary *diction = [Manager returndictiondata:responseObject];

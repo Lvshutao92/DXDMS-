@@ -117,19 +117,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (IBAction)clickLogOut:(id)sender {
     [Manager requestPOSTWithURLStr:KURLNSString(@"system/user/logout") paramDic:nil token:nil finish:^(id responseObject) {
         NSDictionary *diction = [Manager returndictiondata:responseObject];

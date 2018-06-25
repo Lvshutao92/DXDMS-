@@ -10,6 +10,7 @@ import UIKit
 
 class AFNPostTools: AFHTTPSessionManager {
     static let shared = AFNPostTools()
+    
     func postWithPath(path: String,paras: Dictionary<String,Any>?,success: @escaping ((_ result: Any) -> ()),failure: @escaping ((_ error: Error) -> ())) {
         let url = URL(string: path)
         var request = URLRequest.init(url: url!)

@@ -7,10 +7,9 @@
 //
 
 #import "OneViewController.h"
-
-@interface OneViewController ()<UIWebViewDelegate>
-@property(nonatomic,strong)UIWebView *webView;
-@property(nonatomic,strong)JSContext *jsContext;
+#import "IrregularLabel.h"
+@interface OneViewController ()
+@property(nonatomic,strong)IrregularLabel *label;
 @end
 
 @implementation OneViewController
@@ -21,64 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
-    _webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/2)];
-    _webView.delegate=self;
+    
+    self.label = [[IrregularLabel alloc] initWithFrame:CGRectMake(90, 200, 200, 40)];
+    [self.view addSubview:self.label];
+    self.label.text = @"这是一个不规则label";
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.backgroundColor = [UIColor orangeColor];
+    self.label.textColor = [UIColor whiteColor];
+    self.label.font = [UIFont boldSystemFontOfSize:16];
+    [self.view addSubview:self.label];
    
-    [self.view addSubview:_webView];
-    
-    
-   
 }
-
-#pragma mark --webViewDelegate
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    //网页加载之前会调用此方法
-    
-    //retrun YES 表示正常加载网页 返回NO 将停止网页加载z
-    return YES;
-}
-
--(void)webViewDidStartLoad:(UIWebView *)webView
-{
-    //开始加载网页调用此方法
-}
-
--(void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    _jsContext = [self.webView valueForKeyPath:@"cdn-hangzhou.goeasy.io/goeasy.js"];
-    NSLog(@"-------%@",_jsContext);
-    _jsContext[@""] = ^() {
-        NSArray *args = [JSContext currentArguments];
-        for (JSValue *jsVal in args) {
-            
-            NSString *str= [NSString stringWithFormat:@"%@",jsVal];
-            NSLog(@"-------%@",str);
-            
-            
-        }
-    };
-    
-    
-    //网页加载完成调用此方法
-}
-
--(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    //网页加载失败 调用此方法
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 

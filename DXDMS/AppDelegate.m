@@ -46,6 +46,7 @@ static BOOL isProduction = true;
                           channel:channel
                  apsForProduction:isProduction];
     
+   
     
     //可以添加自定义categories
     [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
@@ -53,7 +54,7 @@ static BOOL isProduction = true;
                                                       UIUserNotificationTypeAlert)
                                           categories:nil];
     
-    __weak typeof(self) weakSelf = self;
+    //__weak typeof(self) weakSelf = self;
     [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
         //[JPUSHService setAlias:[Manager redingwenjianming:@"userid.text"] callbackSelector:@selector(tagsAliasCallback:tags:alias:) object:weakSelf];
     }];

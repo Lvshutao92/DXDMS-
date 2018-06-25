@@ -10,6 +10,12 @@
 #define PrefixHeader_pch
 
 
+
+
+
+
+
+
 //引入JPush功能所需头文件
 #import <JPush/JPUSHService.h>
 #import <AdSupport/ASIdentifierManager.h>
@@ -37,9 +43,9 @@
 #import "CustomButton.h"
 #import "SQCustomButton.h"
 #import "FYLCityPickView.h"
-
-
-
+#import "SELUpdateAlert.h"
+#import "HWCalendar.h"
+#import "XYTimeViewController.h"
 
 
 
@@ -112,14 +118,14 @@
 
 
 
-//#define NSString(str) [NSString stringWithFormat:@"http://dms-image.dxracer.com.cn/%@",str]
-//#define CHECKWORD @"30e865d444ea47b58380b892e558484a"
-//#define KURLNSString(str) [NSString stringWithFormat:@"http://10.0.0.24:8888/dxracer/app/%@",str]
-
-
-#define NSString(str) [NSString stringWithFormat:@"http://106.14.249.13:8888/image/dxracerFTP/%@",str]
+#define NSString(str) [NSString stringWithFormat:@"http://dms-image.dxracer.com.cn/%@",str]
 #define CHECKWORD @"30e865d444ea47b58380b892e558484a"
-#define KURLNSString(str) [NSString stringWithFormat:@"http://10.0.0.2:8081/dxracer/app/%@",str]
+#define KURLNSString(str) [NSString stringWithFormat:@"http://10.0.0.24:8888/dxracer/app/%@",str]
+
+
+//#define NSString(str) [NSString stringWithFormat:@"http://106.14.249.13:8888/image/dxracerFTP/%@",str]
+//#define CHECKWORD @"30e865d444ea47b58380b892e558484a"
+//#define KURLNSString(str) [NSString stringWithFormat:@"http://10.0.0.2:8081/dxracer/app/%@",str]
 
 
 //#define NSString(str) [NSString stringWithFormat:@"http://106.15.37.105:8888/product/%@",str]
@@ -127,9 +133,27 @@
 //#define KURLNSString(str1,str2) [NSString stringWithFormat:@"https://dms.dxracer.com.cn/app/%@/%@",str1,str2]
 
 
-//#define NSLog(FORMAT, ...) fprintf(stderr, "%s:%zd\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
-//#else
-//#define NSLog(FORMAT, ...) nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #endif /* PrefixHeader_pch */

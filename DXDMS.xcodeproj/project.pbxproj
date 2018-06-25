@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0819951B207DFB530003935A /* SELUpdateAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 08199518207DFB530003935A /* SELUpdateAlert.m */; };
+		0819951C207DFB530003935A /* SELUpdateAlertConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0819951A207DFB530003935A /* SELUpdateAlertConst.m */; };
 		0826C93320622AEB00DC1521 /* SelecQuanXianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826C93220622AEB00DC1521 /* SelecQuanXianViewController.m */; };
 		0826C938206242EB00DC1521 /* SinTreeCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826C935206242EA00DC1521 /* SinTreeCheckView.m */; };
 		0826C939206242EB00DC1521 /* SinTreeCheckNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826C936206242EA00DC1521 /* SinTreeCheckNode.m */; };
+		082DC24620917FF300D86B9D /* IrregularLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 082DC24520917FF300D86B9D /* IrregularLabel.m */; };
 		082E2B3B2071F7A100C1A509 /* KeHuManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E2B3A2071F7A100C1A509 /* KeHuManagerTableViewController.m */; };
 		082E2B4D2071F85400C1A509 /* KHLB_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E2B4C2071F85400C1A509 /* KHLB_ViewController.m */; };
 		082E2B50207200C800C1A509 /* KHLB_add_edit_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E2B4F207200C800C1A509 /* KHLB_add_edit_ViewController.m */; };
@@ -27,6 +30,15 @@
 		084A098F2071BFAF00A2A8A0 /* XiTongManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A098E2071BFAF00A2A8A0 /* XiTongManagerTableViewController.m */; };
 		084A09922071BFCD00A2A8A0 /* ChanPinManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A09912071BFCD00A2A8A0 /* ChanPinManagerTableViewController.m */; };
 		084A09952071C54300A2A8A0 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A09942071C54300A2A8A0 /* OneViewController.m */; };
+		084BD654207EFCDF00E668D7 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084BD653207EFCDF00E668D7 /* TwoViewController.m */; };
+		084BD657207F3D5100E668D7 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084BD656207F3D5100E668D7 /* ThreeViewController.m */; };
+		08567B762088693D0037C6BD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08567B752088693D0037C6BD /* AssetsLibrary.framework */; };
+		085F64982089E4D50069260E /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085F64972089E4D40069260E /* bg1.jpg */; };
+		085F649A2089E8500069260E /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085F64992089E8500069260E /* bg2.jpg */; };
+		08622CA720873302001EC77A /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08622CA620873302001EC77A /* AnnouncementViewController.m */; };
+		08622CA92087332B001EC77A /* richTextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 08622CA82087332B001EC77A /* richTextEditor.html */; };
+		08622CAD20873CBC001EC77A /* GonggaoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08622CAC20873CBC001EC77A /* GonggaoListViewController.m */; };
+		08622CB020873F05001EC77A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08622CAF20873F05001EC77A /* WebViewController.m */; };
 		08637681205A0A5100148901 /* CompanyAddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08637680205A0A5100148901 /* CompanyAddEditViewController.m */; };
 		08637688205A157F00148901 /* DateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08637687205A157E00148901 /* DateTimePickerView.m */; };
 		0863768C205A386200148901 /* JiTuan_jichu_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863768B205A386200148901 /* JiTuan_jichu_ViewController.m */; };
@@ -37,6 +49,17 @@
 		086405DC2069EC1300C6CF67 /* SQCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 086405DB2069EC1300C6CF67 /* SQCustomButton.m */; };
 		086405E0206A3E8F00C6CF67 /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086405DE206A3E8F00C6CF67 /* UserEditViewController.m */; };
 		086405E1206A3E8F00C6CF67 /* UserEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086405DF206A3E8F00C6CF67 /* UserEditViewController.xib */; };
+		086637B02084541D0082C7C6 /* bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AA2084541D0082C7C6 /* bottom@2x.png */; };
+		086637B12084541D0082C7C6 /* bottom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AB2084541D0082C7C6 /* bottom@3x.png */; };
+		086637B22084541D0082C7C6 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AC2084541D0082C7C6 /* left@2x.png */; };
+		086637B32084541D0082C7C6 /* left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AD2084541D0082C7C6 /* left@3x.png */; };
+		086637B42084541D0082C7C6 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AE2084541D0082C7C6 /* right@2x.png */; };
+		086637B52084541D0082C7C6 /* right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 086637AF2084541D0082C7C6 /* right@3x.png */; };
+		086637BA2084542D0082C7C6 /* HWCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 086637B72084542C0082C7C6 /* HWCalendar.m */; };
+		086637BB2084542D0082C7C6 /* HWOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 086637B92084542D0082C7C6 /* HWOptionButton.m */; };
+		086637C22084560E0082C7C6 /* DayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 086637BD2084560D0082C7C6 /* DayButton.m */; };
+		086637C32084560E0082C7C6 /* XYTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086637BE2084560D0082C7C6 /* XYTimeViewController.xib */; };
+		086637C42084560E0082C7C6 /* XYTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086637C02084560E0082C7C6 /* XYTimeViewController.m */; };
 		0867652A205B4EFD00B6298B /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 08676529205B4EFD00B6298B /* CustomButton.m */; };
 		08676532205B553400B6298B /* RoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08676531205B553400B6298B /* RoleViewController.m */; };
 		08676536205B55F200B6298B /* PermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08676535205B55F200B6298B /* PermissionsViewController.m */; };
@@ -106,12 +129,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08199517207DFB530003935A /* SELUpdateAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SELUpdateAlert.h; sourceTree = "<group>"; };
+		08199518207DFB530003935A /* SELUpdateAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SELUpdateAlert.m; sourceTree = "<group>"; };
+		08199519207DFB530003935A /* SELUpdateAlertConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SELUpdateAlertConst.h; sourceTree = "<group>"; };
+		0819951A207DFB530003935A /* SELUpdateAlertConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SELUpdateAlertConst.m; sourceTree = "<group>"; };
 		0826C93120622AEB00DC1521 /* SelecQuanXianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelecQuanXianViewController.h; sourceTree = "<group>"; };
 		0826C93220622AEB00DC1521 /* SelecQuanXianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelecQuanXianViewController.m; sourceTree = "<group>"; };
 		0826C934206242EA00DC1521 /* SinTreeCheckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinTreeCheckView.h; sourceTree = "<group>"; };
 		0826C935206242EA00DC1521 /* SinTreeCheckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinTreeCheckView.m; sourceTree = "<group>"; };
 		0826C936206242EA00DC1521 /* SinTreeCheckNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinTreeCheckNode.m; sourceTree = "<group>"; };
 		0826C937206242EB00DC1521 /* SinTreeCheckNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinTreeCheckNode.h; sourceTree = "<group>"; };
+		082DC24420917FF300D86B9D /* IrregularLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrregularLabel.h; sourceTree = "<group>"; };
+		082DC24520917FF300D86B9D /* IrregularLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrregularLabel.m; sourceTree = "<group>"; };
 		082E2B392071F7A100C1A509 /* KeHuManagerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeHuManagerTableViewController.h; sourceTree = "<group>"; };
 		082E2B3A2071F7A100C1A509 /* KeHuManagerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeHuManagerTableViewController.m; sourceTree = "<group>"; };
 		082E2B4B2071F85400C1A509 /* KHLB_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHLB_ViewController.h; sourceTree = "<group>"; };
@@ -144,6 +173,20 @@
 		084A09912071BFCD00A2A8A0 /* ChanPinManagerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChanPinManagerTableViewController.m; sourceTree = "<group>"; };
 		084A09932071C54300A2A8A0 /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		084A09942071C54300A2A8A0 /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		084BD652207EFCDF00E668D7 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		084BD653207EFCDF00E668D7 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		084BD655207F3D5100E668D7 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		084BD656207F3D5100E668D7 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		08567B752088693D0037C6BD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		085F64972089E4D40069260E /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
+		085F64992089E8500069260E /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		08622CA520873302001EC77A /* AnnouncementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
+		08622CA620873302001EC77A /* AnnouncementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
+		08622CA82087332B001EC77A /* richTextEditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = richTextEditor.html; sourceTree = "<group>"; };
+		08622CAB20873CBC001EC77A /* GonggaoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GonggaoListViewController.h; sourceTree = "<group>"; };
+		08622CAC20873CBC001EC77A /* GonggaoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GonggaoListViewController.m; sourceTree = "<group>"; };
+		08622CAF20873F05001EC77A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		08622CB120873F1D001EC77A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		0863767F205A0A5100148901 /* CompanyAddEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyAddEditViewController.h; sourceTree = "<group>"; };
 		08637680205A0A5100148901 /* CompanyAddEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyAddEditViewController.m; sourceTree = "<group>"; };
 		08637686205A157E00148901 /* DateTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimePickerView.h; sourceTree = "<group>"; };
@@ -162,6 +205,21 @@
 		086405DD206A3E8F00C6CF67 /* UserEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
 		086405DE206A3E8F00C6CF67 /* UserEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserEditViewController.m; sourceTree = "<group>"; };
 		086405DF206A3E8F00C6CF67 /* UserEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserEditViewController.xib; sourceTree = "<group>"; };
+		086637AA2084541D0082C7C6 /* bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom@2x.png"; sourceTree = "<group>"; };
+		086637AB2084541D0082C7C6 /* bottom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom@3x.png"; sourceTree = "<group>"; };
+		086637AC2084541D0082C7C6 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		086637AD2084541D0082C7C6 /* left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@3x.png"; sourceTree = "<group>"; };
+		086637AE2084541D0082C7C6 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
+		086637AF2084541D0082C7C6 /* right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@3x.png"; sourceTree = "<group>"; };
+		086637B62084542C0082C7C6 /* HWOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWOptionButton.h; sourceTree = "<group>"; };
+		086637B72084542C0082C7C6 /* HWCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCalendar.m; sourceTree = "<group>"; };
+		086637B82084542C0082C7C6 /* HWCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCalendar.h; sourceTree = "<group>"; };
+		086637B92084542D0082C7C6 /* HWOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWOptionButton.m; sourceTree = "<group>"; };
+		086637BD2084560D0082C7C6 /* DayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayButton.m; sourceTree = "<group>"; };
+		086637BE2084560D0082C7C6 /* XYTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTimeViewController.xib; sourceTree = "<group>"; };
+		086637BF2084560E0082C7C6 /* DayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayButton.h; sourceTree = "<group>"; };
+		086637C02084560E0082C7C6 /* XYTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTimeViewController.m; sourceTree = "<group>"; };
+		086637C12084560E0082C7C6 /* XYTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTimeViewController.h; sourceTree = "<group>"; };
 		08676528205B4EFC00B6298B /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		08676529205B4EFD00B6298B /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		08676530205B553400B6298B /* RoleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleViewController.h; sourceTree = "<group>"; };
@@ -263,6 +321,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08567B762088693D0037C6BD /* AssetsLibrary.framework in Frameworks */,
 				75FC5F352074830300EFA29A /* JavaScriptCore.framework in Frameworks */,
 				082E2B7F207207B300C1A509 /* libsqlite3.0.tbd in Frameworks */,
 				0AEDB9B1859CCFAF76949577 /* libPods-DXDMS.a in Frameworks */,
@@ -286,6 +345,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08199516207DFB530003935A /* version update */ = {
+			isa = PBXGroup;
+			children = (
+				08199517207DFB530003935A /* SELUpdateAlert.h */,
+				08199518207DFB530003935A /* SELUpdateAlert.m */,
+				08199519207DFB530003935A /* SELUpdateAlertConst.h */,
+				0819951A207DFB530003935A /* SELUpdateAlertConst.m */,
+			);
+			path = "version update";
+			sourceTree = "<group>";
+		};
 		0826C8D42061FEC600DC1521 /* 编辑权限 */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,9 +457,25 @@
 			path = "集团管理";
 			sourceTree = "<group>";
 		};
+		08622CA0208731C1001EC77A /* 公告管理 */ = {
+			isa = PBXGroup;
+			children = (
+				08622CAB20873CBC001EC77A /* GonggaoListViewController.h */,
+				08622CAC20873CBC001EC77A /* GonggaoListViewController.m */,
+				08622CB120873F1D001EC77A /* WebViewController.h */,
+				08622CAF20873F05001EC77A /* WebViewController.m */,
+				08622CA82087332B001EC77A /* richTextEditor.html */,
+				08622CA520873302001EC77A /* AnnouncementViewController.h */,
+				08622CA620873302001EC77A /* AnnouncementViewController.m */,
+			);
+			path = "公告管理";
+			sourceTree = "<group>";
+		};
 		08637682205A143600148901 /* third */ = {
 			isa = PBXGroup;
 			children = (
+				086637BC208455A80082C7C6 /* 日历区间 */,
+				086637A8208454040082C7C6 /* 日历 */,
 				082E2B8420720BB100C1A509 /* FYLCityPickView */,
 				086405DA2069EC1300C6CF67 /* SQCustomButton.h */,
 				086405DB2069EC1300C6CF67 /* SQCustomButton.m */,
@@ -397,6 +483,8 @@
 				08676529205B4EFD00B6298B /* CustomButton.m */,
 				08637686205A157E00148901 /* DateTimePickerView.h */,
 				08637687205A157E00148901 /* DateTimePickerView.m */,
+				082DC24420917FF300D86B9D /* IrregularLabel.h */,
+				082DC24520917FF300D86B9D /* IrregularLabel.m */,
 			);
 			path = third;
 			sourceTree = "<group>";
@@ -432,6 +520,43 @@
 				086405DF206A3E8F00C6CF67 /* UserEditViewController.xib */,
 			);
 			path = "设置";
+			sourceTree = "<group>";
+		};
+		086637A8208454040082C7C6 /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				086637B82084542C0082C7C6 /* HWCalendar.h */,
+				086637B72084542C0082C7C6 /* HWCalendar.m */,
+				086637B62084542C0082C7C6 /* HWOptionButton.h */,
+				086637B92084542D0082C7C6 /* HWOptionButton.m */,
+				086637A92084541D0082C7C6 /* Image */,
+			);
+			path = "日历";
+			sourceTree = "<group>";
+		};
+		086637A92084541D0082C7C6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				086637AA2084541D0082C7C6 /* bottom@2x.png */,
+				086637AB2084541D0082C7C6 /* bottom@3x.png */,
+				086637AC2084541D0082C7C6 /* left@2x.png */,
+				086637AD2084541D0082C7C6 /* left@3x.png */,
+				086637AE2084541D0082C7C6 /* right@2x.png */,
+				086637AF2084541D0082C7C6 /* right@3x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		086637BC208455A80082C7C6 /* 日历区间 */ = {
+			isa = PBXGroup;
+			children = (
+				086637BF2084560E0082C7C6 /* DayButton.h */,
+				086637BD2084560D0082C7C6 /* DayButton.m */,
+				086637C12084560E0082C7C6 /* XYTimeViewController.h */,
+				086637C02084560E0082C7C6 /* XYTimeViewController.m */,
+				086637BE2084560D0082C7C6 /* XYTimeViewController.xib */,
+			);
+			path = "日历区间";
 			sourceTree = "<group>";
 		};
 		0867652F205B551E00B6298B /* 系统管理-角色定义 */ = {
@@ -619,10 +744,13 @@
 		08BBED3B2058C6BB00C4F7E4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				08199516207DFB530003935A /* version update */,
 				08BBED492058CB3C00C4F7E4 /* LoginViewController.h */,
 				08BBED482058CB3C00C4F7E4 /* LoginViewController.m */,
 				08BBED4A2058CB3C00C4F7E4 /* LoginViewController.xib */,
 				756AC428207CB1D600BA2427 /* bg10.jpg */,
+				085F64972089E4D40069260E /* bg1.jpg */,
+				085F64992089E8500069260E /* bg2.jpg */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -653,8 +781,13 @@
 			children = (
 				084A09932071C54300A2A8A0 /* OneViewController.h */,
 				084A09942071C54300A2A8A0 /* OneViewController.m */,
+				084BD652207EFCDF00E668D7 /* TwoViewController.h */,
+				084BD653207EFCDF00E668D7 /* TwoViewController.m */,
+				084BD655207F3D5100E668D7 /* ThreeViewController.h */,
+				084BD656207F3D5100E668D7 /* ThreeViewController.m */,
 				08BBED572058CFA100C4F7E4 /* FourViewController.h */,
 				08BBED582058CFA100C4F7E4 /* FourViewController.m */,
+				08622CA0208731C1001EC77A /* 公告管理 */,
 				082E2B322071F72000C1A509 /* 客户管理 */,
 				084A09892071BF4000A2A8A0 /* 集团管理 */,
 				084A09882071BF3900A2A8A0 /* 系统管理 */,
@@ -684,8 +817,8 @@
 		75CC9919207366C1008FEBEA /* 资金流水 */ = {
 			isa = PBXGroup;
 			children = (
-				75CC991A207366C1008FEBEA /* ZJLS_ViewController.m */,
 				75CC991B207366C1008FEBEA /* ZJLS_ViewController.h */,
+				75CC991A207366C1008FEBEA /* ZJLS_ViewController.m */,
 			);
 			path = "资金流水";
 			sourceTree = "<group>";
@@ -693,8 +826,8 @@
 		75CC991C207366C1008FEBEA /* 资金余额 */ = {
 			isa = PBXGroup;
 			children = (
-				75CC991D207366C1008FEBEA /* ZJYE_ViewController.m */,
 				75CC991E207366C1008FEBEA /* ZJYE_ViewController.h */,
+				75CC991D207366C1008FEBEA /* ZJYE_ViewController.m */,
 			);
 			path = "资金余额";
 			sourceTree = "<group>";
@@ -746,6 +879,7 @@
 		9662EC3646077E004485BF80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08567B752088693D0037C6BD /* AssetsLibrary.framework */,
 				75FC5F342074830300EFA29A /* JavaScriptCore.framework */,
 				082E2B7E207207B300C1A509 /* libsqlite3.0.tbd */,
 				CB3A952EF6F261C7E1944847 /* libPods-DXDMS.a */,
@@ -877,17 +1011,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086637B42084541D0082C7C6 /* right@2x.png in Resources */,
 				756AC429207CB1D600BA2427 /* bg10.jpg in Resources */,
+				086637B52084541D0082C7C6 /* right@3x.png in Resources */,
 				08BBED4C2058CB3C00C4F7E4 /* LoginViewController.xib in Resources */,
+				08622CA92087332B001EC77A /* richTextEditor.html in Resources */,
+				086637B22084541D0082C7C6 /* left@2x.png in Resources */,
+				085F64982089E4D50069260E /* bg1.jpg in Resources */,
 				086405E1206A3E8F00C6CF67 /* UserEditViewController.xib in Resources */,
+				086637B32084541D0082C7C6 /* left@3x.png in Resources */,
 				75FC5F3320746F4400EFA29A /* DMS_TableViewCell.xib in Resources */,
+				086637C32084560E0082C7C6 /* XYTimeViewController.xib in Resources */,
 				08463D82206B491F004B1EA9 /* SkuListCell.xib in Resources */,
 				08BBECFF2058B0F700C4F7E4 /* LaunchScreen.storyboard in Resources */,
+				086637B12084541D0082C7C6 /* bottom@3x.png in Resources */,
 				08BBECFC2058B0F700C4F7E4 /* Assets.xcassets in Resources */,
 				086405D92069E4A900C6CF67 /* ShoppingCartCell.xib in Resources */,
 				08BBED5E2058F47100C4F7E4 /* OneCell.xib in Resources */,
 				75557CE9207B0C6200BD36DE /* ImgCell.xib in Resources */,
 				08BBECFA2058B0F700C4F7E4 /* Main.storyboard in Resources */,
+				086637B02084541D0082C7C6 /* bottom@2x.png in Resources */,
+				085F649A2089E8500069260E /* bg2.jpg in Resources */,
 				082E2B9020720BB200C1A509 /* FYLCity.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,19 +1106,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				75FC5F382074971A00EFA29A /* CZLB_add_edit_ViewController.m in Sources */,
+				08622CB020873F05001EC77A /* WebViewController.m in Sources */,
 				08676546205BA14D00B6298B /* UserViewController.m in Sources */,
+				08622CAD20873CBC001EC77A /* GonggaoListViewController.m in Sources */,
 				08676532205B553400B6298B /* RoleViewController.m in Sources */,
 				08BBED592058CFA100C4F7E4 /* FourViewController.m in Sources */,
 				08637693205A512D00148901 /* Gongsi_addedit_ViewController.m in Sources */,
 				75CC992F207366C2008FEBEA /* FPXX_ViewController.m in Sources */,
 				082E2B9420720BB200C1A509 /* YYClassInfo.m in Sources */,
 				08BBED372058BD6100C4F7E4 /* ModelOne.m in Sources */,
+				082DC24620917FF300D86B9D /* IrregularLabel.m in Sources */,
 				08BBED3A2058BD6D00C4F7E4 /* ModelTwo.m in Sources */,
 				0867652A205B4EFD00B6298B /* CustomButton.m in Sources */,
 				08AC00E1206DF30900F49DBD /* XilieViewController.m in Sources */,
 				08676536205B55F200B6298B /* PermissionsViewController.m in Sources */,
 				0826C939206242EB00DC1521 /* SinTreeCheckNode.m in Sources */,
+				084BD654207EFCDF00E668D7 /* TwoViewController.m in Sources */,
 				754E0BBE207D8F8900779AEB /* XiaoJiaLogViewController.m in Sources */,
+				086637BA2084542D0082C7C6 /* HWCalendar.m in Sources */,
 				084A09922071BFCD00A2A8A0 /* ChanPinManagerTableViewController.m in Sources */,
 				75CC992A207366C2008FEBEA /* ZJLS_ViewController.m in Sources */,
 				08463D81206B491F004B1EA9 /* SkuListCell.m in Sources */,
@@ -990,13 +1139,17 @@
 				08AC00F0206E0B6500F49DBD /* LeiXingViewController.m in Sources */,
 				75CC992E207366C2008FEBEA /* FPXX_edit_ViewController.m in Sources */,
 				086405E0206A3E8F00C6CF67 /* UserEditViewController.m in Sources */,
+				086637BB2084542D0082C7C6 /* HWOptionButton.m in Sources */,
 				084A09952071C54300A2A8A0 /* OneViewController.m in Sources */,
 				75FC5F3C2074B77200EFA29A /* XiaoShouList_ViewController.m in Sources */,
+				086637C42084560E0082C7C6 /* XYTimeViewController.m in Sources */,
 				75CC992D207366C2008FEBEA /* FKZH_ViewController.m in Sources */,
 				082E2B3B2071F7A100C1A509 /* KeHuManagerTableViewController.m in Sources */,
+				086637C22084560E0082C7C6 /* DayButton.m in Sources */,
 				084A098F2071BFAF00A2A8A0 /* XiTongManagerTableViewController.m in Sources */,
 				0867653F205B939300B6298B /* PermissionsAddEditViewController.m in Sources */,
 				08463D88206B76D0004B1EA9 /* ProductAddEditViewController.m in Sources */,
+				08622CA720873302001EC77A /* AnnouncementViewController.m in Sources */,
 				758F00AE2079FECC002949C8 /* RoleQX_ViewController.m in Sources */,
 				08BBED2E2058B1C600C4F7E4 /* Manager.m in Sources */,
 				086405D82069E4A900C6CF67 /* ShoppingCartCell.m in Sources */,
@@ -1006,6 +1159,7 @@
 				08BBED022058B0F700C4F7E4 /* main.m in Sources */,
 				08BBED5D2058F47100C4F7E4 /* OneCell.m in Sources */,
 				08BBECF42058B0F700C4F7E4 /* AppDelegate.m in Sources */,
+				0819951B207DFB530003935A /* SELUpdateAlert.m in Sources */,
 				082E2B50207200C800C1A509 /* KHLB_add_edit_ViewController.m in Sources */,
 				082E2B9920721E6600C1A509 /* FYLCityModel.m in Sources */,
 				082E2B9320720BB200C1A509 /* NSObject+YYModel.m in Sources */,
@@ -1014,7 +1168,9 @@
 				75FC5F3220746F4400EFA29A /* DMS_TableViewCell.m in Sources */,
 				0826C93320622AEB00DC1521 /* SelecQuanXianViewController.m in Sources */,
 				082E2B9A20721E6600C1A509 /* FYLCityPickView.m in Sources */,
+				0819951C207DFB530003935A /* SELUpdateAlertConst.m in Sources */,
 				08676542205B93A900B6298B /* RoleAddEditViewController.m in Sources */,
+				084BD657207F3D5100E668D7 /* ThreeViewController.m in Sources */,
 				0826C938206242EB00DC1521 /* SinTreeCheckView.m in Sources */,
 				75CC993220736CC2008FEBEA /* FKZH_addedit_ViewController.m in Sources */,
 				08637688205A157F00148901 /* DateTimePickerView.m in Sources */,
@@ -1192,7 +1348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8549J8BJBB;
-				GCC_PREFIX_HEADER = "/Users/lvshutao/Desktop/项目/DXDMS/DXDMS/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/ilovedxracer/Desktop/证书项目/DXDMS/DXDMS/PrefixHeader.pch";
 				INFOPLIST_FILE = DXDMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1216,7 +1372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8549J8BJBB;
-				GCC_PREFIX_HEADER = "/Users/lvshutao/Desktop/项目/DXDMS/DXDMS/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/ilovedxracer/Desktop/证书项目/DXDMS/DXDMS/PrefixHeader.pch";
 				INFOPLIST_FILE = DXDMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +29,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-Cj-TUZ">
                         <rect key="frame" x="0.0" y="488.5" width="320" height="3"/>
-                        <color key="backgroundColor" red="1" green="0.25011491549999998" blue="0.30296844960000002" alpha="0.14675192636986301" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.44804152400000002" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="3" id="3r1-5f-y8L"/>
                         </constraints>
@@ -104,7 +104,7 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFL-hI-EvF">
                         <rect key="frame" x="0.0" y="445.5" width="320" height="1"/>
-                        <color key="backgroundColor" red="1" green="0.25011491549999998" blue="0.30296844960000002" alpha="0.14675192640000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.44804152400000002" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="pRj-5o-rKs"/>
                         </constraints>
@@ -237,6 +237,7 @@
                 <outlet property="delebtnwidth" destination="j2Q-fV-F9r" id="N9h-rY-gYM"/>
                 <outlet property="editbtn" destination="bgN-A2-QZG" id="bc9-ck-8oA"/>
                 <outlet property="lab1" destination="aUL-Lt-dHP" id="TjZ-5l-rBZ"/>
+                <outlet property="lab1Height" destination="OT8-iS-NM2" id="eXm-Pi-ybu"/>
                 <outlet property="lab2" destination="4nq-HG-dFT" id="Hk6-WK-p7j"/>
                 <outlet property="lab3" destination="NHU-8R-iWg" id="gzc-ab-Mxq"/>
                 <outlet property="lab4" destination="ScU-ty-v3p" id="Uui-em-gRM"/>

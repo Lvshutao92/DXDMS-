@@ -248,8 +248,6 @@
 }
 
 
-
-
 - (void)loddeSLList{
     [self.tableview.mj_header endRefreshing];
     __weak typeof(self) weakSelf = self;

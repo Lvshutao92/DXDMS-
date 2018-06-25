@@ -147,5 +147,6 @@
 @property(nonatomic,strong)NSString *transNo;
 @property(nonatomic,strong)NSString *partnerId;
 
-
+@property(nonatomic,strong)NSString *title;
+@property(nonatomic,strong)NSString *content;
 @end

@@ -236,8 +236,7 @@
 
 
 -(void)save{
-    NSLog(@"%@---%@---%@----%@",stringOne,stringTwo,stringOneID,stringTwoID);
-    
+    //NSLog(@"%@---%@---%@----%@",stringOne,stringTwo,stringOneID,stringTwoID);
     
     if (text2.text.length != 0 && text3.text.length != 0 && str1s.length != 0) {
 
